@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы HTML</title>
+    <link rel="stylesheet" href="styles\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <div class="mainheader">
+            Самоучитель по HTML и CSS
+            <div id="theme-switch">Тема</div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav">
+            <div class="navblock-1">
+                <p>HTML</p>
+            </div>
+            <div class="navblock-2">
+                <p">CSS</p>
+            </div>
+        </div>
+        <div class="topics">
+            <div class="html-topics">
+                <div class="active">
+                    <p>Основы HTML</p>
+                    <p  class="smalltext">Изучение основ HTML</p>
+                </div>
+                <a class="del" href="semantics.html"><div class="topic">
+                    <p>HTML Семантика</p>
+                    <p class="smalltext">Семантические теги и их значение</p>
+                </div></a>
+                <a class="del" href="html-tables.html"><div class="topic">
+                    <p>HTML Таблицы</p>
+                    <p class="smalltext">Составление таблиц с помощью HTML-тегов</p>
+                </div></a>
+                <a class="del" href="html-forms.html"><div class="topic">
+                    <p>HTML Формы</p>
+                    <p class="smalltext">Поля для ввода, списки для выбора, флажки</p>
+                </div></a>
+                <a class="del" href="popular-tags.html"><div class="topic">
+                    <p>Частые теги</p>
+                    <p class="smalltext">Теги, которые стоит знать</p>
+                </div></a>
+            </div>
+            <div class="css-topics">
+                <a class="del" href="css-basics.html"><div class="topic">
+                    <p>CSS Основы</p>
+                    <p class="smalltext">Изучение основ CSS</p>
+                </div></a>
+                <a class="del" href="css-boxmodel.html"><div class="topic">
+                    <p>CSS Box-model</p>
+                    <p class="smalltext">Свойства margin, padding, border и другие</p>
+                </div></a>
+                <a class="del" href="css-position.html"><div class="topic">
+                    <p>CSS Position</p>
+                    <p class="smalltext">Абсолютное, относительное и другое</p>
+                </div></a>
+                <a class="del" href="css-float.html"><div class="topic">
+                    <p>CSS Float</p>
+                    <p class="smalltext">Различные значения float и как это работает</p>
+                </div></a>
+                <a class="del" href="css-flexbox.html"><div class="topic">
+                    <p>CSS Flexbox</p>
+                    <p class="smalltext">Свойства flex-контейнера и его flex-элементов</p>
+                </div></a>    
+            </div> 
+        </div>
+        <a class="del" href="index.html"><div class="home">
+            <p>На главную</p>
+        </div></a>
+    </nav>
+    <article>
+        <h2>Что такое HTML?</h2>
+        <p>HTML (Hypertext Markup Language) - это язык разметки, который используется для создания веб-страниц. Он позволяет описывать структуру и содержание веб-страницы, такие как заголовки, абзацы, списки, картинки и ссылки. <p>HTML состоит из тегов, которые обозначают различные элементы на странице и их связи друг с другом. Когда веб-страница с HTML-кодом загружается в браузер, браузер читает и отображает ее согласно описанной структуре и содержанию, давая пользователю возможность интерактивно взаимодействовать со страницей.</p> <p>HTML - это язык без которого не может существовать веб-сайт. Это основа всех веб-страниц, которые мы видим в интернете. Без HTML не будет структуры и содержания для веб-страницы, так же как без фундамента не будет здания.</p></p>
+        <h2>Синтаксис</h2>
+        <p>HTML синтаксис состоит из тегов, которые обозначают элементы на странице и их связи друг с другом. Тег может обладать открывающим и закрывающим тегом, в котором описывается содержимое элемента, а может иметь только открывающих тег. Например, тег <span class="code">&lt;p&gt;</span> обозначает абзац текста, и внутри него может быть написан текст:</p>
+        <img src="images/html/1.PNG">
+        <p>Открывающий и закрывающий теги могут иметь атрибуты, которые используются для описания дополнительной информации о элементе. Например, тег <span class="code">&lt;img&gt;</span> используется для вставки изображения и имеет атрибут <span class="code">src</span>, который указывает на местоположение изображения и атрибут <span class="code">alt</span>, который позволяет отображать указанный текст в случае если картинка не загрузится:</p> 
+        <img src="images/html/2.PNG">
+        <h2>Структура HTML-документа</h2>  
+        <p>Структура HTML документа обычно состоит из следующих частей:</p> 
+        <ul>
+            <li>Декларация документа: это строка, которая обозначает тип документа и версию HTML, например: <span class="code">&lt;!DOCTYPE html&gt;</span> </li>
+            <li>Тег <span class="code">&lt;html&gt;</span> : он открывает и закрывает документ HTML и содержит все остальные элементы документа.</li>
+            <li>Тег <span class="code">&lt;head&gt;</span> : содержит метаданные о документе, такие как заголовок, ключевые слова и стили, которые не отображаются на странице.</li>
+            <li>Тег <span class="code">&lt;body&gt;</span> : содержит видимое содержимое документа, такое как текст, изображения и ссылки. Это где основная часть содержимого сайта находится.</li>
+        </ul>
+        <img src="images/html/3.PNG">
+        <p>Это стандартная структура HTML документа, которая может модифицироваться в зависимости от нужд и задач, но основные элементы должны присутствовать в каждом документе HTML. Важно понимать и использовать стандартные структуры и правила синтаксиса HTML, чтобы обеспечить соответствие стандартам и совместимость с различными браузерами.</p>
+        <h2>Основные теги</h2>
+        <h3>Теги &lt;h1&gt; - &lt;h6&gt;</h3>  
+        <p><span class="code">&lt;h1&gt;</span> - <span class="code">&lt;h6&gt;</span> - Заголовки различного уровная, используются для организации содержимого. Важно уметь правильно их использовать. <span class="code">&lt;h1&gt;</span> используется на странице один раз и является заголовком всей страницы. Остальные являются подзаголовками. Также важно использовать в правильном порядке. <span class="code">&lt;h3&gt;</span> должен быть подзаголовком <span class="code">&lt;h2&gt;</span>, но никак не наоборот. Не используйте более низкие уровни заголовков для того чтобы снизить размер шрифта: для этого используется CSS.</p>
+        <p>Пример кода:</p>
+        <img src="images/html/4.PNG">
+        <p>Как это отображается в браузере:</p>
+        <img src="images/html/5.PNG">
+        <h3>Тег &lt;a&gt;</h3>
+        <p> Тег <span class="code">&lt;a&gt;</span> является одним из важных элементов HTML и предназначен для создания ссылок. В зависимости от присутствия атрибутов <span class="code">name</span> или <span class="code">href</span> тег <span class="code">&lt;a&gt;</span> устанавливает ссылку или якорь. Якорем называется закладка внутри страницы, которую можно указать в качестве цели ссылки. При использовании ссылки, которая указывает на якорь, происходит переход к закладке внутри веб-страницы. </p>
+        <p>Для создания ссылки необходимо сообщить браузеру, что является ссылкой, а также указать адрес документа, на который следует сделать ссылку. В качестве значения атрибута <span class="code">href</span> используется адрес документа (URL, Universal Resource Locator, универсальный указатель ресурсов), на который происходит переход. Адрес ссылки может быть абсолютным и относительным. Абсолютные адреса работают везде и всюду независимо от имени сайта или веб-страницы, где прописана ссылка. Относительные ссылки, как следует из их названия, построены относительно текущего документа или корня сайта.</p>
+        <p>Синтаксис:</p>
+        <img src="images/html/6.PNG">
+    </article>
+</body>
+</html>
