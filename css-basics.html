@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы CSS</title>
+    <link rel="stylesheet" href="styles\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <div class="mainheader">
+            Самоучитель по HTML и CSS
+            <div id="toggle-theme-button">Тема</div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav">
+            <div id="navblock-1" class="navblock-1">
+                <p>HTML</p>
+            </div>
+            <div id="navblock-2" class="navblock-2">
+                <p">CSS</p>
+            </div>
+        </div>
+        <div class="topics">
+            <div class="html-topics">
+                <a class="del" href="html-basics.html"><div id="topic" class="topic">
+                    <p>Основы HTML</p>
+                    <p  class="smalltext">Изучение основ HTML</p>
+                </div></a>
+                <a class="del" href="lists.html"><div id="topic" class="topic">
+                    <p>Списки</p>
+                    <p class="smalltext">Упорядоченные и маркированные</p>
+                </div></a>
+                <a class="del" href="html-tables.html"><div id="topic" class="topic">
+                    <p>Таблицы</p>
+                    <p class="smalltext">Составление таблиц с помощью HTML-тегов</p>
+                </div></a>
+                <a class="del" href="html-forms.html"><div id="topic" class="topic">
+                    <p>Формы</p>
+                    <p class="smalltext">Поля для ввода, списки для выбора, флажки</p>
+                </div></a>
+                <a class="del" href="semantics.html"><div id="topic" class="topic">
+                    <p>Семантика</p>
+                    <p class="smalltext">Семантические теги и их значение</p>
+                </div></a>
+            </div>
+            <div class="css-topics">
+                <div id="topic" class="active">
+                    <p>CSS Основы</p>
+                    <p class="smalltext">Изучение основ CSS</p>
+                </div>
+                <a class="del" href="css-boxmodel.html"><div id="topic" class="topic">
+                    <p>Box-model</p>
+                    <p class="smalltext">Свойства margin, padding, border и другие</p>
+                </div></a>
+                <a class="del" href="css-position.html"><div id="topic" class="topic">
+                    <p>Position</p>
+                    <p class="smalltext">Абсолютное, относительное и другое</p>
+                </div></a>
+                <a class="del" href="css-float.html"><div id="topic" class="topic">
+                    <p>Float</p>
+                    <p class="smalltext">Различные значения float и как это работает</p>
+                </div></a>
+                <a class="del" href="css-flexbox.html"><div id="topic" class="topic">
+                    <p>Flexbox</p>
+                    <p class="smalltext">Свойства flex-контейнера и его flex-элементов</p>
+                </div></a>    
+            </div> 
+        </div>
+        <a class="del" href="index.html"><div id="home" class="home">На главную</div></a>
+    </nav>
+    <article>
+        <h2>Что такое CSS?</h2>
+        <p>CSS (Cascading Style Sheets) - это язык стилей, который используется для описания внешнего вида документа, написанного с использованием языка разметки, такого как HTML или XML. Он позволяет разделить содержимое документа от его внешнего вида, что позволяет легко изменять внешний вид сайта без изменения самого содержимого.</p>
+        <p>В CSS есть три основные сущности: селекторы, правила и значения.</p>
+        <p> Селекторы используются для выбора элементов на странице, которые нужно изменить. Существует множество различных типов селекторов, таких как теги, классы и идентификаторы.</p>
+        <img src="images/html/32.PNG"> 
+        <p> Классы и инентификаторы должны прописываться в HTML документе для какого-нибудь элемента, который вы хотите изменить отдельно от других. Классы прописываются с помощью атрибута <span class="code">class</span> со значением равным названию класса. В CSS элементы с классом указываются с помощью точки после которой идет название класса.</p>
+        <img src="images/html/33.PNG"> 
+        <p>Индефикаторы аналогично, с помощью атрибута <span class="code">id</span> и в CSS указываются с помощью <span class="code">#</span>.</p>
+        <img src="images/html/34.PNG">
+        <p>Правила - это инструкции, которые определяют, как должен выглядеть выбранный элемент. Правило состоит из свойства и значения.</p>
+        <p>Значения - это то, что присваивает свойству определенное значение. Например, если свойство - это цвет текста, то значение может быть "красный" или "синий".</p>
+        <img src="images/html/35.PNG">
+        <p>В этом примере мы используем селекторы <span class="code">h1</span> и  <span class="code">.highlight</span> для выбора элементов на странице. Для каждого из этих элементов мы определяем правила со свойствами <span class="code">color</span>"" и <span class="code">font-size</span>"" для первого селектора и <span class="code">background-color</span>"" для второго селектора соответственно, и соответствующими значениями "blue", "36px", "yellow". После каждой пары свойство-значение нужно ставить точку с запятой.</p>
+        <p>Не пугайтесь, что не понимаете что значат некоторые свойства и их свойства, далее в главе мы рассмотрим основные свойства.</p>
+        <h2>Зачем нужны div и span?</h2>
+        <p>В предыдущих главах не было придано много внимания тегам <span class="code">div</span> и <span class="code">span</span>, потому что не было в этом особой потребности. Но сейчас когда мы подошли к стилизации нашей страницы, то стоит ознакомится с этими элементами.</p>
+        <p>HTML элементы <span class="code">div</span> и <span class="code">span</span> являются блочными и строчными элементами соответственно, и они обычно используются для группировки и стилизации содержимого.</p>
+        <p><span class="code">div</span> является блочным элементом, который обычно используется для группировки содержимого в блоке. Это может быть использовано для определения секций сайта, таких как заголовок, контент, подвал и т.д. и может быть использован для назначения стилей через CSS.</p>
+        <p><span class="code">span</span> является строчным элементом, который обычно используется для группировки мелких частей текста или другого содержимого внутри блочного элемента. Это может быть использовано для назначения стилей на отдельный фрагмент текста или другого содержимого без затрагивания остального содержимого. Например, может быть использован для изменения цвета только определенного слова в предложении.</p>
+        <p>Оба эти элемента могут быть использованы в сочетании с CSS для создания более сложных и динамичных дизайнов веб-страниц.</p>
+        <h2>Основные свойства</h2>
+        <h3>CSS-свойства влияющие на цвет и фон</h3>
+        <hr>
+        <p><span class="code">color:</span> — CSS-свойство влияющее на цвет текста: заголовка, абзаца, ссылки и т.д. В качестве его значения выступает имя цвета или шестнацатеричный код в RGB-формате.</p>
+        <p>Примеры кода с использованием CSS-свойства <span class="code">color:</span></p>
+        <p><span class="code">color: green;</span> — текст должен быть зелёного цвета, в качестве значения задано имя цвета,</p>
+        <p><span class="code">color: #008800;</span> — текст должен быть зелёного цвета, в качестве значения задан шестнадцатеричный код в RGB-формате.</p>
+        <hr>
+        <p><span class="code">background-color:</span> — CSS-свойство влияющее на цвет фона заголовка, абзаца, ссылки и т.д. В качестве его значения выступает имя цвета или шестнацатеричный код в RGB-формате.</p>
+        <p>Примеры кода с использованием CSS-свойства <span class="code">background-color:</span></p>
+        <p><span class="code">background-color: blue;</span> — фон должен быть синего цвета,</p>
+        <p><span class="code">background-color: #0000ff;</span> — фон должен быть синего цвета.</p>
+        <hr>
+        <p><span class="code">background-image:</span> — CSS-свойство устанавливающее изображение, в качестве фона фона заголовка, абзаца, ссылки и т.д. Его значением выступает URL (адрес) изображения.</p>
+        <p>Примеры кода с использованием CSS-свойства <span class="code">background-image:</span></p>
+        <p><span class="code">background-image: url(http://имя домена.ru/kartinka.jpg);</span> — фоном должно стать изображение, находящееся по адресу http://имя домена.ru/kartinka.jpg</p>
+        <hr>
+        <h3>CSS-свойства влияющие на шрифт </h3>
+        <hr>
+        <p><span class="code">font-size:</span> — CSS-свойство влияющее на размер шрифта заголовка, абзаца, ссылки и т.д. В качестве его значения выступает единица измерения: пиксель (px), процент (%), пункт (pt) и т.д.</p>
+        <p>Примеры кода с использованием CSS-свойства <span class="code">font-size:</span></p>
+        <p><span class="code">font-size: 17px;</span> — размер шрифта должен быть 17 пикселей,</p>
+        <p><span class="code">font-size: 20pt;</span> — размер шрифта должен быть 20 пунктов.</p>
+        <hr>
+        <p><span class="code">font-family:</span> — CSS-свойство устанавливающее имя шрифта для заголовка, абзаца, ссылки и т.д. В качестве его значения выступает имя шрифта: Arial, Courier, Impact, Garamond, Georgia, Helvetica, Tahoma, Times (установлен по-умочанию), Verdana и т.д.</p>
+        <p>Примеры кода с использованием CSS-свойства <span class="code">font-family:</span></p>
+        <p><span class="code">font-family: Arial;</span> — имя шрифта должно быть Arial,</p>
+        <p><span class="code">font-family: Impact;</span> — имя шрифта должно Impact.</p>
+        <hr>
+        <p><span class="code">font-style:</span> — CSS-свойство влияющее на начертание (стиль) шрифта заголовка, абзаца, ссылки и т.д. В качестве его значения выступает: normal, oblique.</p>
+        <p>Примеры кода с использованием CSS-свойства <span class="code">font-style:</span></p>
+        <p><span class="code">font-style: normal;</span> — нормальное начертание шифта,</p>
+        <p><span class="code">font-style: oblique;</span> — наклонное начертание шифта.</p>
+        <hr>
+        <p><span class="code">font-weight:</span> — CSS-свойство влияющее на толщину шрифта заголовка, абзаца, ссылки и т.д. В качестве его значения выступет: normal, bold.</p>
+        <p>Примеры кода с использованием CSS-свойства <span class="code">font-weight:</span></p>
+        <p><span class="code">font-weight: normal;</span> — нормальное начертание шифта,</p>
+        <p><span class="code">font-weight: bold;</span> — жирное начертание шифта.</p>
+        <hr>
+        <h3>CSS-свойства влияющие на текст</h3>
+        <hr>
+        <p><span class="code">text-align:</span> — CSS-свойство влияющее на выравнивание текста в заголовке, абзаце и других блочных элементах. В качестве его значения выступает: left, center, right, justify.</p>
+        <p>Примеры кода с использованием CSS-свойства <span class="code">text-align:</span></p>
+        <p><span class="code">text-align: left;</span> — выравнивание текста по левому краю (установлен по-умолчанию),</p>
+        <p><span class="code">text-align: center;</span> — выравнивание текста по центру,</p>
+        <p><span class="code">text-align: right;</span> — выравнивание текста по правому краю,</p>
+        <p><span class="code">text-align: justify;</span> — равномерное выравнивание текста по левому и правому краям.</p>
+        <hr>
+        <p><span class="code">text-indent:</span> — CSS-свойство влияющее на отступ первой строки (красная строка) текста в закаловке, абзаце и других блочных элементах. В качестве его значения выступает единица измерения: пиксель (px), процент (%), пункт (pt) и т.д.</p>
+        <p>Примеры кода с использованием CSS-свойства <span class="code">text-indent:</span></p>
+        <p><span class="code">text-indent: 20px;</span> — отступ первой строки равен 20 пикселям,</p>
+        <p><span class="code">text-indent: 15pt;</span> — отступ первой строки равен 15 пунктам.</p>
+        <hr>
+        <p><span class="code">line-height:</span> — CSS-свойство влияющее на расстояние между строками текста (интерлиньяж) заголовка, абзаца, ссылки и т.д. В качестве его значения выступает единица измерения: множитель, пиксель (px), процент (%), пункт (pt) и т.д.</p>
+        <p>Примеры кода с использованием CSS-свойства <span class="code">text-indent:</span></p>
+        <p><span class="code">line-height: 35px;</span> — расстояние между строками равно 35 пикселей,</p>
+        <p><span class="code">line-height: 1.5;</span> — расстояние между строками равно 1.5 по множителю (аналогичен 150%).</p>
+        <hr>
+        <p><span class="code">letter-spacing:</span> — CSS-свойство влияющее на расстояние между символами в словах заголовка, абзаца ссылки и т.д. В качестве его значения выступает единица измерения: пиксель (px), процент (%), пункт (pt) и т.д.</p>
+        <p>Примеры кода с использованием CSS-свойства <span class="code">letter-spacing:</span></p>
+        <p><span class="code">letter-spacing: 3px;</span> — расстояние между символами в словах, равно 3 пикселя,</p>
+        <p><span class="code">letter-spacing: 5pt;</span> — расстояние между символами в словах, равно 5 пунктов.</p>
+        <hr>
+        <p><span class="code">word-spacing:</span> — CSS-свойство влияющее на расстояние между словами в тексте заголовка, абзаца, ссылки и т.д. В качестве его значения выступает единица измерения: пиксель (px), процент (%), пункт (pt) и т.д.</p>
+        <p>Примеры кода с использованием CSS-свойства <span class="code">word-spacing:</span></p>
+        <p><span class="code">word-spacing: 10px;</span> — расстояние между словами, равно 10 пикселей,</p>
+        <p><span class="code">word-spacing: 7pt;</span> — расстояние между словами, равно 7 пунктов.</p>
+        <hr>
+        <p><span class="code">text-transform:</span> — CSS-свойство влияющее на вид букв в тексте, делая их прописными или строчными. В качестве его значения выступает: capitalize, lowercase, uppercase.</p>
+        <p>Примеры кода с использованием CSS-свойства <span class="code">text-transform:</span></p>
+        <p><span class="code">text-transform: capitalize;</span> — первая буква каждого слова начинается с верхнего регистра,</p>
+        <p><span class="code">text-transform: uppercase;</span> — все буквы в тексте записываются в верхнем регистре,</p>
+        <p><span class="code">text-transform: lowercase;</span> — все буквы в тексте записываются в нижнем регистре.</p>
+        <hr>
+        <p><span class="code">text-shadow:</span> — CSS-свойство создающее тень текста.</p>
+        <p>В качестве его значения выступает: цвет ось-x ось-y радиус.</p>
+        <p>Пример кода с использованием CSS-свойства <span class="code">text-shadow:</span></p>
+        <p><span class="code">text-shadow: green 3px 2px 2px;</span> — тень будет зелёного цвета, со сдвигом в лево на 3 пикселя, со сдвигом вниз на 2 пикселя, радиус (разброс тени) будет составлять 5 пикселей.</p>
+        <hr>
+        <h3>CSS-свойства влияющие на границу (обводку)</h3>
+        <hr>
+        <p><span class="code">border-color:</span> — CSS-свойство влияющее на цвет границ заголовка, абзаца, ссылки и т.д. В качестве его значения выступает имя цвета или его шестнацатеричный код в RGB-формате.</p>
+        <p>Примеры кода с использованием CSS-свойства <span class="code">border-color:</span></p>
+        <p><span class="code">border-color: green;</span> — зелёный цвет обводки,</p>
+        <p><span class="code">border-color: #008800;</span> — зелёный цвет обводки, задан в шестнадцатеричном коде RGB-формата.</p>
+        <hr>
+        <p><span class="code">border-width:</span> — CSS-свойство влияющее на толщину границ заголовка, абзаца, ссылки и т.д. В качестве его значения выступает единица измерения: пиксель (px).</p>
+        <p>Примеры кода с использованием CSS-свойства <span class="code">border-width:</span></p>
+        <p><span class="code">border-width: 1px;</span> — толщина обводки равна 1 пикселю,</p>
+        <p><span class="code">border-width: 3px;</span> — толщина обводки равна 3 пикселям.</p>
+        <hr>
+        <p>Примеры кода с использованием CSS-свойства <span class="code"></span>border-style:</p>
+        <p><span class="code">border-style: solid;</span> — обводка как сплошная линия,</p>
+        <p><span class="code">border-style: dashed;</span> — обводка в виде отрезков,</p>
+        <p><span class="code">border-style: dotted;</span> — обводка в виде точек,</p>
+        <p><span class="code">border-style: double;</span> — обводка в виде двойной сплошной линии.</p>
+        <hr>
+        <h2>Задание</h2>
+        <p>Попробуйте поиграться со свойствами и попробуйте оформить созданный вами сайт-портфолио.</p>
+        </article>
+        <a class="del" href="#"><div id="up" class="up">Наверх</div></a>
+        <footer>
+            <div class="footer">
+                <p> Котовщиков Никита</p>
+                <p>Группа ПР-22.101</p>
+            </div>
+        </footer>
+        <script type="text/javascript" src="/js/script.js"></script>
+    </body>
+</html>

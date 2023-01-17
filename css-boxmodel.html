@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-model</title>
+    <link rel="stylesheet" href="styles\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <div class="mainheader">
+            Самоучитель по HTML и CSS
+            <div id="toggle-theme-button">Тема</div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav">
+            <div id="navblock-1" class="navblock-1">
+                <p>HTML</p>
+            </div>
+            <div id="navblock-2" class="navblock-2">
+                <p">CSS</p>
+            </div>
+        </div>
+        <div class="topics">
+            <div class="html-topics">
+                <a class="del" href="html-basics.html"><div id="topic" class="topic">
+                    <p>Основы HTML</p>
+                    <p  class="smalltext">Изучение основ HTML</p>
+                </div></a>
+                <a class="del" href="lists.html"><div id="topic" class="topic">
+                    <p>Списки</p>
+                    <p class="smalltext">Упорядоченные и маркированные</p>
+                </div></a>
+                <a class="del" href="html-tables.html"><div id="topic" class="topic">
+                    <p>Таблицы</p>
+                    <p class="smalltext">Составление таблиц с помощью HTML-тегов</p>
+                </div></a>
+                <a class="del" href="html-forms.html"><div id="topic" class="topic">
+                    <p>Формы</p>
+                    <p class="smalltext">Поля для ввода, списки для выбора, флажки</p>
+                </div></a>
+                <a class="del" href="semantics.html"><div id="topic" class="topic">
+                    <p>Семантика</p>
+                    <p class="smalltext">Семантические теги и их значение</p>
+                </div></a>
+            </div>
+            <div class="css-topics">
+                <a class="del" href="css-basics.html"><div id="topic" class="topic">
+                    <p>CSS Основы</p>
+                    <p class="smalltext">Изучение основ CSS</p>
+                </div></a>
+                <div id="topic" class="active">
+                    <p>Box-model</p>
+                    <p class="smalltext">Свойства margin, padding, border и другие</p>
+                </div>
+                <a class="del" href="css-position.html"><div id="topic" class="topic">
+                    <p>Position</p>
+                    <p class="smalltext">Абсолютное, относительное и другое</p>
+                </div></a>
+                <a class="del" href="css-float.html"><div id="topic" class="topic">
+                    <p>Float</p>
+                    <p class="smalltext">Различные значения float и как это работает</p>
+                </div></a>
+                <a class="del" href="css-flexbox.html"><div id="topic" class="topic">
+                    <p>Flexbox</p>
+                    <p class="smalltext">Свойства flex-контейнера и его flex-элементов</p>
+                </div></a>    
+            </div> 
+        </div>
+        <a class="del" href="index.html"><div id="home" class="home">На главную</div></a>
+    </nav>
+    <article>
+        <h1>Box-model в CSS</h1>
+        <p>Box-model в CSS - это модель, которая определяет, как браузеры рассчитывают размеры и отступы элементов HTML.</p>
+        <p>Каждый HTML элемент имеет четыре составляющие:</p>
+        <ul>
+            <li>Содержимое (content): это собственно содержимое элемента, например, текст внутри тега <span class="code">&lt;p&gt;</span>.</li>
+            <li>Паддинг (padding): это пространство внутри содержимого и границы элемента.</li>
+            <li>Граница (border): это линия вокруг паддинга элемента.</li>
+            <li>Отступ (margin): это пространство вокруг границы элемента, и оно отделяет его от других элементов.</li>
+            <img src="images/html/36.PNG">
+        </ul>
+        <h3>Content</h3>
+        <p>Внутренняя область элемента (content area) содержит текст и другие элементы, расположенные внутри (контент или содержимое). У неё часто бывает фон, цвет или изображение (в таком порядке: фоновый цвет скрывается под непрозрачным изображением), и она находится внутри content edge; её размеры называются ширина контента (content width или content-box width), и высота контента (content height или content-box height). Иногда ещё говорят «внутренняя ширина/высота элемента»</p>
+        <p>По умолчанию размер внутренней области с содержимым задаётся свойствами <span class="code">width</span>, <span class="code">min-width</span>, <span class="code">max-width</span>, <span class="code">height</span>, <span class="code">min-height</span> и <span class="code">max-height</span>.</p>
+        <h3>Padding</h3>
+        <p>Поля элемента (padding area) — это пустая область, окружающая контент. Она может быть залита каким-то цветом, покрыта фоновый картинкой, а её границы называются края полей (padding edge).</p>
+        <p>Размеры полей задаются по отдельности с разных сторон свойствами <span class="code">padding-top</span>, <span class="code">padding-right</span>, <span class="code">padding-bottom</span>, <span class="code">padding-left</span> или общим свойством <span class="code">padding</span>.</p>
+        <h3>Border</h3>
+        <p>Область рамки (border area) окружает поля элемента, а её граница называется края рамки (border edge). Ширина рамки задаётся отдельным свойством <span class="code">border-width</span> или в составе свойства <span class="code">border</span>. Размеры элемента с учётом полей и рамки иногда называют внешней шириной/высотой элемента.</p>
+        <h3>Margin</h3>
+        <p>Отступы (margin area) добавляют пустое пространство вокруг элемента и определяют расстояние до соседних элементов.</p>
+        <p>Величина отступов задаётся по отдельности в разных направлениях свойствами <span class="code">margin-top</span>, <span class="code">margin-right</span>, <span class="code">margin-bottom</span>, <span class="code">margin-left</span> или общим свойством <span class="code">margin</span>.</p>
+        <p>Отступы двух соседних элементов, расположенных друг над другом или вложенных друг в друга, могут накладываться. Это называется схлопывание границ (margin collapsing). Схлопываются только вертикальные отступы.</p>
+        <hr>
+        <div class="center">
+            <p>Когда вы задаете размеры для элемента, например ширину и высоту, вы задаете размер только для содержимого. Отступы, границы и паддинг добавляются к этому размеру, чтобы определить окончательный размер элемента.</p>
+            <p>Это важно учитывать при назначении стилей, потому что если вы не учитываете размер паддинга и границы, элемент может оказаться больше или меньше, чем ожидалось. В CSS существует свойство <span class="code">box-sizing</span>, которое позволяет изменить способ расчета размеров элемента, и включает в себя возможность включения или исключения паддинга и границы из расчета размеров элемента.</p>
+            <p>В общем, box-model в CSS определяет способ расчета размеров элементов и отступов, позволяя разработчикам лучше контролировать внешний вид и поведение элементов на веб-странице.</p>
+        </div>
+        <hr>
+        <h2>Задание</h2>
+        Продолжайте стилизовать свой сайт-портфолио. Добавьте различные свойства изученые в этой главе, чтобы сайт стал выглядить красивее.
+    </article>
+    <a class="del" href="#"><div class="up">Наверх</div></a>
+    <footer>
+        <div class="footer">
+            <p> Котовщиков Никита</p>
+            <p>Группа ПР-22.101</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>

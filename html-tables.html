@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблицы</title>
+    <link rel="stylesheet" href="styles\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <div class="mainheader">
+            Самоучитель по HTML и CSS
+            <div id="toggle-theme-button">Тема</div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav">
+            <div id="navblock-1" class="navblock-1">
+                <p>HTML</p>
+            </div>
+            <div id="navblock-2" class="navblock-2">
+                <p">CSS</p>
+            </div>
+        </div>
+        <div class="topics">
+            <div class="html-topics">
+                <a class="del" href="html-basics.html"><div id="topic" class="topic">
+                    <p>Основы HTML</p>
+                    <p  class="smalltext">Изучение основ HTML</p>
+                </div></a>
+                <a class="del" href="lists.html"><div id="topic" class="topic">
+                    <p>Списки</p>
+                    <p class="smalltext">Упорядоченные и маркированные</p>
+                </div></a>
+               <div id="topic" class="active">
+                    <p>Таблицы</p>
+                    <p class="smalltext">Составление таблиц с помощью HTML-тегов</p>
+                </div>
+                <a class="del" href="html-forms.html"><div id="topic" class="topic">
+                    <p>Формы</p>
+                    <p class="smalltext">Поля для ввода, списки для выбора, флажки</p>
+                </div></a>
+                <a class="del" href="semantics.html"><div id="topic" class="topic">
+                    <p>Семантика</p>
+                    <p class="smalltext">Семантические теги и их значение</p>
+                </div></a>
+            </div>
+            <div class="css-topics">
+                <a class="del" href="css-basics.html"><div id="topic" class="topic">
+                    <p>CSS Основы</p>
+                    <p class="smalltext">Изучение основ CSS</p>
+                </div></a>
+                <a class="del" href="css-boxmodel.html"><div id="topic" class="topic">
+                    <p>Box-model</p>
+                    <p class="smalltext">Свойства margin, padding, border и другие</p>
+                </div></a>
+                <a class="del" href="css-position.html"><div id="topic" class="topic">
+                    <p>Position</p>
+                    <p class="smalltext">Абсолютное, относительное и другое</p>
+                </div></a>
+                <a class="del" href="css-float.html"><div id="topic" class="topic">
+                    <p>Float</p>
+                    <p class="smalltext">Различные значения float и как это работает</p>
+                </div></a>
+                <a class="del" href="css-flexbox.html"><div id="topic" class="topic">
+                    <p>Flexbox</p>
+                    <p class="smalltext">Свойства flex-контейнера и его flex-элементов</p>
+                </div></a>    
+            </div> 
+        </div>
+    </nav>
+    <article>
+        <h2>Зачем нужны HTML таблицы?</h2>
+        <p>HTML таблицы - это элемент, который используется для организации и отображения данных в табличной форме. Они состоят из строк и столбцов, каждая ячейка которых может содержать текст или другие элементы.</p>
+        <p>Не смотря на то, что в современных веб-дизайнах использование HTML таблиц для отображения данных становится все менее популярным из-за их ограниченной функциональности и недостаточной гибкости, все же стоит понимать как их создавать и редактировать.</p>
+        <p>Особенно важно уметь обращаться с HTML таблицами, если вы будете работать со старыми сайтами, которые используют табличную верстку.</p>
+        <h2>Создание таблицы</h2>
+        <p>Для добавления таблицы на веб-страницу используется тег <span class="code">&lt;table&gt;</span>. Этот элемент служит контейнером для элементов, определяющих содержимое таблицы. Любая таблица состоит из строк и ячеек, которые задаются соответственно с помощью тегов <span class="code">&lt;tr&gt;</span> и <span class="code">&lt;td&gt;</span>. Таблица должна содержать хотя бы одну ячейку. С помощью тега <span class="code">&lt;th&gt;</span> можно оформлять ячейки первой строки. Текст в ячейке, оформленной с помощью тега <span class="code">&lt;th&gt;</span>, отображается браузером шрифтом жирного начертания и выравнивается по центру ячейки. В остальном, разницы между ячейками, созданными через теги <span class="code">&lt;td&gt;</span> и <span class="code">&lt;th&gt;</span> нет. Также стоит использовать атрибут <span class="code">border</span>, который позволят отобразить границы и изменять их ширину.</p>
+        <img src="images/html/17.PNG">
+        <p>Отображение в браузере:</p>
+        <img src="images/html/18.PNG">
+        <h2>Атрибуты</h2>
+        <p>При работе с таблицами вам могут очень пригодиться атрибуты <span class="code">colspan</span> и <span class="code">rowspan</span>. Оба атрибута предназначены для объединения ячеек. <span class="code">colspan</span> нужен для объединения ячеек из 2 или более столбцов, а <span class="code">rowspan</span> для объединения ячеек из 2 или более рядов.</p>
+        <p></p>
+        <p>Пример кода:</p>
+        <img src="images/html/19.PNG">
+        <p>Отображение в браузере:</p>
+        <img src="images/html/20.PNG">
+        <hr>
+        <h2>Задание</h2>
+        <p>Создайте таблицу с смартфонами. В первом столбце пусть будет производитель, во втором модель, а в третьем цена.</p>
+    </article>
+    <a class="del" href="#"><div class="up">Наверх</div></a>
+    <footer>
+        <div class="footer">
+            <p> Котовщиков Никита</p>
+            <p>Группа ПР-22.101</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>

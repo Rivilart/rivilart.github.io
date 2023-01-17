@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формы</title>
+    <link rel="stylesheet" href="styles\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <div class="mainheader">
+            Самоучитель по HTML и CSS
+            <div id="toggle-theme-button">Тема</div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav">
+            <div id="navblock-1" class="navblock-1">
+                <p>HTML</p>
+            </div>
+            <div id="navblock-2" class="navblock-2">
+                <p">CSS</p>
+            </div>
+        </div>
+        <div class="topics">
+            <div class="html-topics">
+                <a class="del" href="html-basics.html"><div id="topic" class="topic">
+                    <p>Основы HTML</p>
+                    <p  class="smalltext">Изучение основ HTML</p>
+                </div></a>
+                <a class="del" href="lists.html"><div id="topic" class="topic">
+                    <p>Списки</p>
+                    <p class="smalltext">Упорядоченные и маркированные</p>
+                </div></a>
+                <a class="del" href="html-tables.html"><div id="topic" class="topic">
+                    <p>Таблицы</p>
+                    <p class="smalltext">Составление таблиц с помощью HTML-тегов</p>
+                </div></a>
+                <div id="topic" class="active">
+                    <p>Формы</p>
+                    <p class="smalltext">Поля для ввода, списки для выбора, флажки</p>
+                </div>
+                <a class="del" href="semantics.html"><div id="topic" class="topic">
+                    <p>Семантика</p>
+                    <p class="smalltext">Семантические теги и их значение</p>
+                </div></a>
+            </div>
+            <div class="css-topics">
+                <a class="del" href="css-basics.html"><div id="topic" class="topic">
+                    <p>CSS Основы</p>
+                    <p class="smalltext">Изучение основ CSS</p>
+                </div></a>
+                <a class="del" href="css-boxmodel.html"><div id="topic" class="topic">
+                    <p>Box-model</p>
+                    <p class="smalltext">Свойства margin, padding, border и другие</p>
+                </div></a>
+                <a class="del" href="css-position.html"><div id="topic" class="topic">
+                    <p>Position</p>
+                    <p class="smalltext">Абсолютное, относительное и другое</p>
+                </div></a>
+                <a class="del" href="css-float.html"><div id="topic" class="topic">
+                    <p>Float</p>
+                    <p class="smalltext">Различные значения float и как это работает</p>
+                </div></a>
+                <a class="del" href="css-flexbox.html"><div id="topic" class="topic">
+                    <p>Flexbox</p>
+                    <p class="smalltext">Свойства flex-контейнера и его flex-элементов</p>
+                </div></a>    
+            </div> 
+        </div>
+    </nav>
+    <article>
+        <h1>HTML формы</h1>
+        <p>HTML формы используются для создания интерактивных элементов на веб-странице, которые позволяют пользователям вводить информацию и отправлять ее на сервер. Формы могут содержать различные типы полей ввода, такие как текстовые поля, чекбоксы, радиокнопки и выпадающие списки.</p>
+        <h2>Как создавать формы?</h2>
+        <p>Основной элемент формы является тег <span class="code">&lt;form&gt;</span>. Этот тег используется для определения начала и конца формы. Внутри тега <span class="code">&lt;form&gt;</span> можно использовать различные типы элементов ввода, такие как <span class="code">&lt;input&gt;</span>, <span class="code">&lt;textarea&gt;</span> и <span class="code">&lt;select&gt;</span>.</p>
+        <p>Необходимы следующие атрибуты:</p>&lt;input&gt;
+        <ul>
+            <li><span class="code">action</span> содержит адрес, который определяет, куда будет отправлена информация формы; </li>
+            <li><span class="code">method</span> может быть либо GET, либо POST и определяет, как будет отправлена информация формы.</li>
+        </ul>
+        <h2>Тег <span class="code">&lt;input&gt;</span></h2>
+        <p>Тег <span class="code">&lt;input&gt;</span> используется для создания различных типов полей ввода, таких как текстовое поле, чекбокс. Вы можете изменить тип поля ввода, указав атрибут <span class="code">type</span> с соответствующим значением, например "text" для текстового поля и "checkbox" для чекбокса</p>
+        <h3>Текстовые поля</h3>
+        <ul>
+            <li><span class="code">&lt;input type="text"&gt;</span> - для ввода текста, допускает любой тип символов</li>
+            <li><span class="code">&lt;input type="email"&gt;</span> - для ввода email</li>
+            <li><span class="code">&lt;input type="password"&gt;</span> - для ввода паролей, символы показываются как точки</li>
+            <li><span class="code">&lt;input type="number"&gt;</span> - для ввода чисел, могут быть использованы клавиши вверх/вниз</li>
+            <li><span class="code">&lt;input type="tel"&gt;</span> - для ввода номера телефона</li>
+            <li><span class="code">&lt;textarea&gt;&lt;/textarea&gt;</span> - похож на input, но может быть изменен размер поля</li>
+        </ul>
+        <img src="images/html/30.PNG">
+        <p>Хотя эти поля очень похожи и позволяют пользователям вводить текст любого рода (даже неправильный), их тип обеспечивает специфическую семантику для ввода, определяя, какую информацию поле должно содержать.</p>
+        <p>Существует атрибут <span class="code">placeholder</span>, который отображает подсказывающих текст, который исчезнет, как только будет введён некоторый текст.</p>
+        <img src="images/html/21.PNG">
+        <p>Отображение в браузере:</p>
+        <img src="images/html/22.PNG">
+        <h3>Использование <span class="code">&lt;label&gt;</span></h3>
+        <p>Так как элементы формы сами по себе не очень описательны, им, как правило, предшествует текстовая метка.</p>
+        <img src="images/html/23.PNG">
+        <p>Хотя вы можете применять короткие абзацы для описания элементов формы, использование <span class="code">&lt;label&gt;</span> является семантически более правильным, потому что они существуют только в формах</p>
+        <h3>Флажки</h3>
+        <p>Флажки — это элементы формы, которые имеют только два состояния: включено или выключено. Они в основном позволяют пользователю сказать: «Да» или «Нет» для чего-то.</p>
+        <img src="images/html/24.PNG">
+        <p>Вот как оно выглядит:</p>
+        <img src="images/html/25.PNG">
+        <p>Поскольку может оказаться сложно щёлкнуть по небольшому флажку, рекомендуется поместить флажок и его описание внутрь <span class="code">&lt;label&gt;</span>. Вы можете щёлкнуть по тексту чтобы переключить флажок.</p> 
+        <img src="images/html/31.PNG">
+        <p>По умолчанию флажок выключен. Вы можете пометить его включенным, просто используя атрибут <span class="code">checked</span>.</p>   
+        <h3>Переключатели</h3>
+        <p>Вы можете предоставить пользователю список вариантов на выбор с помощью переключателей.</p>
+        <p>Для работы этого элемента формы, ваш HTML-код должен сгруппировать список переключателей вместе. Это достигается с помощью одного и того же значения для атрибута <span class="code">name</span>:</p>
+        <img src="images/html/26.PNG">
+        <p>Отображение в браузере:</p>
+        <img src="images/html/27.PNG">
+        <p>Когда все переключатели используют одинаковое значение атрибута <span class="code">name</span>, выбор одного из вариантов отменит все остальные.</p>
+        <h2>Выпадающие меню</h2>
+        <p>Если количество вариантов для выбора занимает слишком много места, вы можете воспользоваться выпадающими меню <span class="code">&lt;select&gt;</span>.</p>
+        <img src="images/html/28.PNG">
+        <p>Вот как это выглядит:</p>
+        <img src="images/html/29.PNG">
+        <hr>
+        <h2>Задание</h2>
+        <p>Попробуйте создать форму регестрации для своего сайта.</p>
+    </article>
+    <a class="del" href="#"><div class="up">Наверх</div></a>
+    <footer>
+        <div class="footer">
+            <p> Котовщиков Никита</p>
+            <p>Группа ПР-22.101</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>

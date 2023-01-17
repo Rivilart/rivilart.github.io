@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Самоучитель по HTML и CSS</title>
+    <link rel="stylesheet" href="styles\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <div class="mainheader">
+            Самоучитель по HTML и CSS
+            <div id="toggle-theme-button">Тема</div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav">
+            <div id="navblock-1" class="navblock-1">
+                <p>HTML</p>
+            </div>
+            <div id="navblock-2" class="navblock-2">
+                <p">CSS</p>
+            </div>
+        </div>
+        <div class="topics">
+            <div class="html-topics">
+                <a class="del" href="html-basics.html"><div id="topic" class="topic">
+                    <p>Основы HTML</p>
+                    <p  class="smalltext">Изучение основ HTML</p>
+                </div></a>
+                <a class="del" href="lists.html"><div id="topic" class="topic">
+                    <p>Списки</p>
+                    <p class="smalltext">Упорядоченные и маркированные</p>
+                </div></a>
+                <a class="del" href="html-tables.html"><div id="topic" class="topic">
+                    <p>Таблицы</p>
+                    <p class="smalltext">Составление таблиц с помощью HTML-тегов</p>
+                </div></a>
+                <a class="del" href="html-forms.html"><div id="topic" class="topic">
+                    <p>Формы</p>
+                    <p class="smalltext">Поля для ввода, списки для выбора, флажки</p>
+                </div></a>
+                <a class="del" href="semantics.html"><div id="topic" class="topic">
+                    <p>Семантика</p>
+                    <p class="smalltext">Семантические теги и их значение</p>
+                </div></a>
+            </div>
+            <div class="css-topics">
+                <a class="del" href="css-basics.html"><div id="topic" class="topic">
+                    <p>CSS Основы</p>
+                    <p class="smalltext">Изучение основ CSS</p>
+                </div></a>
+                <a class="del" href="css-boxmodel.html"><div id="topic" class="topic">
+                    <p>Box-model</p>
+                    <p class="smalltext">Свойства margin, padding, border и другие</p>
+                </div></a>
+                <div id="topic" class="active">
+                    <p>Position</p>
+                    <p class="smalltext">Абсолютное, относительное и другое</p>
+                </div>
+                <a class="del" href="css-float.html"><div id="topic" class="topic">
+                    <p>Float</p>
+                    <p class="smalltext">Различные значения float и как это работает</p>
+                </div></a>
+                <a class="del" href="css-flexbox.html"><div id="topic" class="topic">
+                    <p>Flexbox</p>
+                    <p class="smalltext">Свойства flex-контейнера и его flex-элементов</p>
+                </div></a>    
+            </div> 
+        </div>
+    </nav>
+    <article>
+        <h1>Position</h1>
+        <p>CSS Position - это свойство, используемое для указания позиции элемента на веб-странице. Это позволяет разработчикам контролировать макет элементов на странице, определяя их позицию относительно других элементов или окна просмотра.</p>
+        <h2>Различные значения </h2>
+        <p>Есть пять различных значений position в CSS: <span class="code">static</span>, <span class="code">relative</span>, <span class="code">absolute</span>, <span class="code">fixed</span> и <span class="code">sticky</span>.</p>
+        <h3>static</h3>
+        <p><span class="code">static</span> - это значение по умолчанию и означает, что элемент будет расположен в соответствии с обычным потоком документа.</p>
+        <img src="images/html/37.PNG">
+        <img src="images/html/38.PNG">
+        <h3>relative</h3>
+        <p><span class="code">relative</span> позволяет позиционировать элемент относительно его нормальной позиции, с возможностью сдвига по горизонтали или вертикали с помощью свойств <span class="code">top</span>, <span class="code">bottom</span>, <span class="code">left</span> и <span class="code">right</span>.</p>
+        <p>Попробуем сдвинуть наш элемент с классом <span class="code">child</span> на 20px вниз по вертикали.</p>
+        <img src="images/html/39.PNG">
+        <img src="images/html/40.PNG">
+        <h3>Координаты</h3>
+        <p>Для сдвига можно использовать координаты:</p>
+        <ul>
+            <li><span class="code">top</span> – сдвиг от «обычной» верхней границы</li>
+            <li><span class="code">bottom</span> – сдвиг от нижней границы</li>
+            <li><span class="code">left</span> – сдвиг слева</li>
+            <li><span class="code">right</span> – сдвиг справа</li>
+        </ul>
+        <p>Не будут работать одновременно указанные <span class="code">top</span> и <span class="code">bottom</span>, <span class="code">left</span> и <span class="code">right</span>. Нужно использовать только одну границу из каждой пары.</p>
+        <p>Возможны отрицательные координаты и координаты, использующие другие единицы измерения. Например, <span class="code">left: 10%</span> сдвинет элемент на 10% его ширины вправо, а <span class="code">left: -10%</span> – влево. При этом часть элемента может оказаться за границей окна.</p>
+        <h3>absolute</h3>
+        <p>При <span class="code">absolute</span> элемент исчезает с того места, где он должен быть и позиционируется заново. Остальные элементы, располагаются так, как будто этого элемента никогда не было.</p>
+        <p>Координаты <span class="code">top/bottom/left/right</span> для нового местоположения отсчитываются от ближайшего позиционированного родителя, т.е. родителя с позиционированием, отличным от <span class="code">static</span>. Если такого родителя нет – то относительно документа.</p>
+        <p>Ширина элемента с <span class="code">position: absolute</span> устанавливается по содержимому. Детали алгоритма вычисления ширины описаны в стандарте.</p>
+        <p>Давайте попробуем, например, отпозиционировать заголовок в правом-верхнем углу документа:</p>
+        <img src="images/html/41.PNG">
+        <img src="images/html/42.PNG">
+        <h3>fixed</h3>
+        <p>Позиционирует объект точно так же, как <span class="code">absolute</span>, но относительно окна.</p>
+        <p>Разница лишь в том, что когда страницу прокручивают, фиксированный элемент остаётся на своём месте и не прокручивается вместе со страницей.</p>
+        <h3>sticky</h3>
+        <p>Блоки с «липким» позиционированием ведут себя как <span class="code">position: relative</span> и <span class="code">position: fixed</span> одновременно. Пока блок не достиг указанного расстояния от края окна браузера, он ведёт себя как относительно спозиционированный. Когда блок достигнет этой точки, то станет вести себя, как будто мы указали <span class="code">position: fixed</span>. А когда он встретится с противоположным краем родителя, то снова будет вести себя, как <span class="code">position: relative</span>.</p>
+        <hr>
+        <div class="center">
+            <p>В общем, CSS position является важным свойством, которое позволяет разработчикам контролировать макет элементов на веб-странице. Он может использоваться для различных целей, от простых настроек до более сложных макетов и может сочетаться с другими свойствами CSS для еще большего контроля.</p>
+        </div>
+        <hr>
+    </article>
+    <a class="del" href="#"><div class="up">Наверх</div></a>
+    <footer>
+        <div class="footer">
+            <p> Котовщиков Никита</p>
+            <p>Группа ПР-22.101</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>

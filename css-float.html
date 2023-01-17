@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <link rel="stylesheet" href="styles\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <div class="mainheader">
+            Самоучитель по HTML и CSS
+            <div id="toggle-theme-button">Тема</div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav">
+            <div id="navblock-1" class="navblock-1">
+                <p>HTML</p>
+            </div>
+            <div id="navblock-2" class="navblock-2">
+                <p">CSS</p>
+            </div>
+        </div>
+        <div class="topics">
+            <div class="html-topics">
+                <a class="del" href="html-basics.html"><div id="topic" class="topic">
+                    <p>Основы HTML</p>
+                    <p  class="smalltext">Изучение основ HTML</p>
+                </div></a>
+                <a class="del" href="lists.html"><div id="topic" class="topic">
+                    <p>Списки</p>
+                    <p class="smalltext">Упорядоченные и маркированные</p>
+                </div></a>
+                <a class="del" href="html-tables.html"><div id="topic" class="topic">
+                    <p>Таблицы</p>
+                    <p class="smalltext">Составление таблиц с помощью HTML-тегов</p>
+                </div></a>
+                <a class="del" href="html-forms.html"><div id="topic" class="topic">
+                    <p>Формы</p>
+                    <p class="smalltext">Поля для ввода, списки для выбора, флажки</p>
+                </div></a>
+                <a class="del" href="semantics.html"><div id="topic" class="topic">
+                    <p>Семантика</p>
+                    <p class="smalltext">Семантические теги и их значение</p>
+                </div></a>
+            </div>
+            <div class="css-topics">
+                <a class="del" href="css-basics.html"><div id="topic" class="topic">
+                    <p>CSS Основы</p>
+                    <p class="smalltext">Изучение основ CSS</p>
+                </div></a>
+                <a class="del" href="css-boxmodel.html"><div id="topic" class="topic">
+                    <p>Box-model</p>
+                    <p class="smalltext">Свойства margin, padding, border и другие</p>
+                </div></a>
+                <a class="del" href="css-position.html"><div id="topic" class="topic">
+                    <p>Position</p>
+                    <p class="smalltext">Абсолютное, относительное и другое</p>
+                </div></a>
+                <div id="topic" class=" active">
+                    <p>Float</p>
+                    <p class="smalltext">Различные значения float и как это работает</p>
+                </div>
+                <a class="del" href="css-flexbox.html"><div id="topic" class="topic">
+                    <p>Flexbox</p>
+                    <p class="smalltext">Свойства flex-контейнера и его flex-элементов</p>
+                </div></a>    
+            </div> 
+        </div>
+    </nav>
+    <article>
+        <h1>CSS float</h1>
+        <p>CSS свойство <span class="code">float</span> используется для указания, как должен "плавать" элемент внутри своего родительского контейнера. Когда элемент устанавливается в "плавающий" режим, он автоматически перемещается влево или вправо, и оставляя пустое место справа или слева от него, соответственно. Это позволяет другим элементам обтекать его и располагаться рядом с ним.</p>
+        <p>Иногда при вёрстке блока нужно, чтобы текст рядом с картинкой занимал всё оставшееся место, а после картинки располагался на всю ширину блока. Для таких ситуаций и создан <span class="code">float</span>. Элемент, для которого указано это свойство, частично выходит из потока: все элементы блочного контекста, прописанные в коде после элемента с <span class="code">float</span>, занимают его место, а элементы строчного контекста — «обтекают» его.</p>
+        <p>Без использования <span class="code">float</span></p>
+        <img src="images/html/43.PNG">
+        <p>Используя <span class="code">float</span> :</p>
+        <img src="images/html/44.PNG">
+        <p>Для установки свойства <span class="code">float</span> нужно добавить его к CSS правилу и установить значение <span class="code">left</span> или <span class="code">right</span> соответственно.</p>
+        <img src="images/html/45.PNG">
+        <h2>Как работает float</h2>
+        <p>При применении этого свойства происходит следующее:</p>
+        <ul>
+            <li>Элемент позиционируется как обычно, а затем вынимается из документа потока и сдвигается влево (для <span class="code">left</span>) или вправо (для <span class="code">right</span>) до того как коснётся либо границы родителя, либо другого элемента с <span class="code">float</span>.</li>
+            <li>Если пространства по горизонтали не хватает для того, чтобы вместить элемент, то он сдвигается вниз до тех пор, пока не начнёт помещаться.</li>
+            <li>Другие непозиционированные блочные элементы без <span class="code">float</span> ведут себя так, как будто элемента с <span class="code">float</span> нет, так как он убран из потока.</li>
+            <li>Строки (inline-элементы), напротив, «знают» о <span class="code">float</span> и обтекают элемент по сторонам.</li>
+        </ul>
+        <h2>Очистка потока</h2>
+        <p>Рассмотрим пример. Наша цель получить вот такое расположение элементов:</p>
+        <img src="images/html/46.PNG">
+        <p>Но просто использововав такой код:</p>
+        <img src="images/html/47.PNG">
+        <p>Мы получаем нечто другое:</p>
+        <img src="images/html/48.PNG">
+        <p>Произошло следующее:</p>
+        <ul>
+            <li>Заголовок не заметил <span class="code">float</span> (он же блочный элемент) и расположился сразу после предыдущего параграфа.</li>
+            <li>После него идёт <span class="code">float-элемент</span> – картинка. Он был сдвинут влево. Согласно алгоритму, он двигается до левой границы или до касания с другим float-элементом, что и произошло.</li>
+            <li>Так как у картинки <span class="code">float:left</span>, то последующий текст обтекает её справа.</li>
+        </ul>
+        <h3>Как исправить?</h3>
+        <p>Мы будем использовать <span class="code">div</span> со свойством <span class="code">clear</span>. </p>
+        <img src="images/html/49.PNG">
+        <p>Применение этого свойства сдвигает элемент вниз до тех пор, пока не закончатся <span class="code">float'ы</span> слева/справа/с обеих сторон.</p>
+        <p>Просто добавим <span class="code">div</span> со свойством <span class="code">clear: both</span> после первого параграфа:</p>
+        <img src="images/html/50.PNG">
+        <p>И все встанет на свои места.</p>
+        <h2>Еще одна проблема float</h2>
+        <p>Из-за того, что блок с float удалён из потока, родитель не выделяет под него места.</p>
+        <p>К примеру:</p>
+        <img src="images/html/52.PNG">
+        <img src="images/html/51.PNG">
+        <p>Чтобы это исправить есть несколько способов</p>
+        <h3>Поставить родителю float</h3>
+        <p>Элемент с <span class="code">float</span> обязан расшириться, чтобы вместить вложенные <span class="code">float</span>.</p>
+        <p>Поэтому, если это допустимо, то установка <span class="code">float</span> контейнеру всё исправит:</p>
+        <img src="images/html/53.PNG">
+        <img src="images/html/54.PNG">
+        <h3>Добавить в родителя элемент с clear</h3>
+        <p>Добавим элемент <span class="code">div style="clear:both"</span> в самый конец контейнера .parent.</p>
+        <img src="images/html/55.PNG">
+        <img src="images/html/56.PNG">
+        <p>Проблема решена!</p>
+        <hr>
+        <div class="center">
+            <p>Свойство <span class="code">float</span> может вызвать некоторые проблемы с макетом и производительностью, поэтому его следует использовать с осторожностью. Например, элементы, которые "плавают", могут вызвать проблемы с высотой родительского контейнера, а также могут вызвать проблемы с доступностью и производительностью в некоторых случаях. В некоторых случаях может быть предпочтительнее использовать свойства <span class="code">display</span> и <span class="code">flexbox</span> для достижения того же эффекта.</p>
+        </div>
+        <hr>
+    </article>
+    <a class="del" href="#"><div class="up">Наверх</div></a>
+    <footer>
+        <div class="footer">
+            <p> Котовщиков Никита</p>
+            <p>Группа ПР-22.101</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>

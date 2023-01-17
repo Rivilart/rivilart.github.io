@@ -21,69 +21,67 @@
 </head>
 <body>
     <header>
-        <div class="mainheader">
+        <div id="mainheader" class="mainheader">
             Самоучитель по HTML и CSS
-            <div id="theme-switch">Тема</div>
+            <div id="toggle-theme-button">Тема</div>
         </div>
     </header>
     <nav>
         <div class="nav">
-            <div class="navblock-1">
+            <div id="navblock-1" class="navblock-1">
                 <p>HTML</p>
             </div>
-            <div class="navblock-2">
+            <div id="navblock-2" class="navblock-2">
                 <p">CSS</p>
             </div>
         </div>
         <div class="topics">
             <div class="html-topics">
-                <div class="active">
+                <div id="topic" class="active">
                     <p>Основы HTML</p>
                     <p  class="smalltext">Изучение основ HTML</p>
                 </div>
-                <a class="del" href="semantics.html"><div class="topic">
-                    <p>HTML Семантика</p>
-                    <p class="smalltext">Семантические теги и их значение</p>
+                <a class="del" href="lists.html"><div id="topic" class="topic">
+                    <p>Списки</p>
+                    <p class="smalltext">Упорядоченные и маркированные</p>
                 </div></a>
-                <a class="del" href="html-tables.html"><div class="topic">
-                    <p>HTML Таблицы</p>
+                <a class="del" href="html-tables.html"><div id="topic" class="topic">
+                    <p>Таблицы</p>
                     <p class="smalltext">Составление таблиц с помощью HTML-тегов</p>
                 </div></a>
-                <a class="del" href="html-forms.html"><div class="topic">
-                    <p>HTML Формы</p>
+                <a class="del" href="html-forms.html"><div id="topic" class="topic">
+                    <p>Формы</p>
                     <p class="smalltext">Поля для ввода, списки для выбора, флажки</p>
                 </div></a>
-                <a class="del" href="popular-tags.html"><div class="topic">
-                    <p>Частые теги</p>
-                    <p class="smalltext">Теги, которые стоит знать</p>
+                <a class="del" href="semantics.html"><div id="topic" class="topic">
+                    <p>Семантика</p>
+                    <p class="smalltext">Семантические теги и их значение</p>
                 </div></a>
             </div>
             <div class="css-topics">
-                <a class="del" href="css-basics.html"><div class="topic">
+                <a class="del" href="css-basics.html"><div id="topic" class="topic">
                     <p>CSS Основы</p>
                     <p class="smalltext">Изучение основ CSS</p>
                 </div></a>
-                <a class="del" href="css-boxmodel.html"><div class="topic">
-                    <p>CSS Box-model</p>
+                <a class="del" href="css-boxmodel.html"><div id="topic" class="topic">
+                    <p>Box-model</p>
                     <p class="smalltext">Свойства margin, padding, border и другие</p>
                 </div></a>
-                <a class="del" href="css-position.html"><div class="topic">
-                    <p>CSS Position</p>
+                <a class="del" href="css-position.html"><div id="topic" class="topic">
+                    <p>Position</p>
                     <p class="smalltext">Абсолютное, относительное и другое</p>
                 </div></a>
-                <a class="del" href="css-float.html"><div class="topic">
-                    <p>CSS Float</p>
+                <a class="del" href="css-float.html"><div id="topic" class="topic">
+                    <p>Float</p>
                     <p class="smalltext">Различные значения float и как это работает</p>
                 </div></a>
-                <a class="del" href="css-flexbox.html"><div class="topic">
-                    <p>CSS Flexbox</p>
+                <a class="del" href="css-flexbox.html"><div id="topic" class="topic">
+                    <p>Flexbox</p>
                     <p class="smalltext">Свойства flex-контейнера и его flex-элементов</p>
                 </div></a>    
             </div> 
         </div>
-        <a class="del" href="index.html"><div class="home">
-            <p>На главную</p>
-        </div></a>
+        <a class="del" href="index.html"><div id="home" class="home">На главную</div></a>
     </nav>
     <article>
         <h2>Что такое HTML?</h2>
@@ -91,7 +89,7 @@
         <h2>Синтаксис</h2>
         <p>HTML синтаксис состоит из тегов, которые обозначают элементы на странице и их связи друг с другом. Тег может обладать открывающим и закрывающим тегом, в котором описывается содержимое элемента, а может иметь только открывающих тег. Например, тег <span class="code">&lt;p&gt;</span> обозначает абзац текста, и внутри него может быть написан текст:</p>
         <img src="images/html/1.PNG">
-        <p>Открывающий и закрывающий теги могут иметь атрибуты, которые используются для описания дополнительной информации о элементе. Например, тег <span class="code">&lt;img&gt;</span> используется для вставки изображения и имеет атрибут <span class="code">src</span>, который указывает на местоположение изображения и атрибут <span class="code">alt</span>, который позволяет отображать указанный текст в случае если картинка не загрузится:</p> 
+        <p>Открывающий тег может иметь атрибуты, которые используются для описания дополнительной информации о элементе. Например, тег <span class="code">&lt;img&gt;</span> используется для вставки изображения и имеет атрибут <span class="code">src</span>, который указывает на местоположение изображения и атрибут <span class="code">alt</span>, который позволяет отображать указанный текст в случае если картинка не загрузится:</p> 
         <img src="images/html/2.PNG">
         <h2>Структура HTML-документа</h2>  
         <p>Структура HTML документа обычно состоит из следующих частей:</p> 
@@ -111,10 +109,50 @@
         <p>Как это отображается в браузере:</p>
         <img src="images/html/5.PNG">
         <h3>Тег &lt;a&gt;</h3>
-        <p> Тег <span class="code">&lt;a&gt;</span> является одним из важных элементов HTML и предназначен для создания ссылок. В зависимости от присутствия атрибутов <span class="code">name</span> или <span class="code">href</span> тег <span class="code">&lt;a&gt;</span> устанавливает ссылку или якорь. Якорем называется закладка внутри страницы, которую можно указать в качестве цели ссылки. При использовании ссылки, которая указывает на якорь, происходит переход к закладке внутри веб-страницы. </p>
+        <p> Тег &lt;a&gt;</span> является одним из важных элементов HTML и предназначен для создания ссылок. В зависимости от присутствия атрибутов <span class="code">name</span> или <span class="code">href</span> тег <span class="code">&lt;a&gt;</span> устанавливает ссылку или якорь. Якорем называется закладка внутри страницы, которую можно указать в качестве цели ссылки. При использовании ссылки, которая указывает на якорь, происходит переход к закладке внутри веб-страницы. </p>
         <p>Для создания ссылки необходимо сообщить браузеру, что является ссылкой, а также указать адрес документа, на который следует сделать ссылку. В качестве значения атрибута <span class="code">href</span> используется адрес документа (URL, Universal Resource Locator, универсальный указатель ресурсов), на который происходит переход. Адрес ссылки может быть абсолютным и относительным. Абсолютные адреса работают везде и всюду независимо от имени сайта или веб-страницы, где прописана ссылка. Относительные ссылки, как следует из их названия, построены относительно текущего документа или корня сайта.</p>
         <p>Синтаксис:</p>
         <img src="images/html/6.PNG">
+        <h3>Тег &lt;div&gt;</h3>
+        <p> Этот блочный элемент используется для группировки элементов и назначения стилей. Является самым часто используемым тегом.</p>
+        <h3>Тег &lt;strong&gt;</h3>
+        <p>Данный тег расставляет акценты в тексте путём выделения его фрагментов полужирным начертанием.</p>
+        <p>Пример кода:</p>
+        <img src="images/html/7.PNG">
+        <p>Как это выглядит в браузере:</p>
+        <img src="images/html/8.PNG">
+        <h3>Тег  &lt;b&gt;</h3>
+        <p>Может показаться, что этот тег идентичен тегу <span class="code">&lt;strong&gt;</span>, ведь на странице он отображается также:</p>
+        <img src="images/html/9.PNG">
+        <p>Но различие все же есть: тег <span class="code">&lt;strong&gt;</span> имеет семантическое значение (браузер придаст большее значение словам, которые выделены этим тегом), а тег <span class="code">&lt;b&gt;</span> просто придает жирность без придания важности</p>
+        <h3>Тег &lt;em&gt;</h3>
+        <p> Этот тег выделят текст курсивом, придавая акцент:</p>
+        <img src="images/html/10.PNG">
+        <h3>Тег &lt;i&gt;</h3>
+        <p>Этот тег похож на предыдущий, но не придает акцента тексту.</p>
+        <h3>Теги &lt;sub&gt; и &lt;sup&gt;</h3>
+        <p>Тег <span class="code">&lt;sub&gt;</span> придает подстрочное начертание символов:</p>
+        <img src="images/html/11.PNG">
+        <p>А тег <span class="code">&lt;sup&gt;</span> придает надстрочное начертание символов:</p>
+        <img src="images/html/12.PNG">
+        <h3>Тег &lt;pre&gt;</h3>
+        <p>  Прошу заметить, что когда мы используем обычные теги, то все переносы текста игнорируются, можете проверить это сами. А вот чтобы произвести вывод неформатированного текста с сохранением пробелов и особенностей переносов, используется тег <span class="code">&lt;pre&gt;</span>.</p>
+        <h3>Добавление аудиозаписей и видео на сайт</h3>
+        <p>Для этого используется тег <span class="code">&lt;audio&gt;</span> c атрибутом <span class="code">src</span>, где указывается ссылка на аудиозапись.</p>
+        <p>Видео может вставить аналогичным способом, используя тег <span class="code">&lt;video&gt;</span> с атрибутом src. Также можно задать высоту и ширину, используя атрибуты <span class="code">height</span> и <span class="code">width</span> соответственно.</p>
+        <hr>
+        <div class="center"><p>Это только некоторые из основных тегов HTML, существует множество других тегов для различных целей, таких как таблицы, формы, списки. Их мы изучим в отдельных главах. Важно понимать как эти теги используются и как они взаимодействуют друг с другом, чтобы можно было создавать и модифицировать веб-страницы качественно.</p></div>
+        <hr>
+        <h2>Задание</h2>
+        <p>Создайте свой первый HTML-документ, и попробуйте задействовать все HTML-элементы описанные в главе.</p>
     </article>
+    <a class="del" href="#"><div id="up" class="up">Наверх</div></a>
+    <footer>
+        <div class="footer">
+            <p> Котовщиков Никита</p>
+            <p>Группа ПР-22.101</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/js/script.js"></script>
 </body>
 </html>
