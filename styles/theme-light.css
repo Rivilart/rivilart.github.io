@@ -34,22 +34,6 @@ body {
     font-size: 25px;
 }
 
-#toggle-theme-button {
-    position: absolute;
-    top: 0px;
-    width: 80px;
-    height: 35px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 15px;
-    text-align: center;
-    transition: border 0.25s ease;
-    border: 4px solid #4ea7a2;
-}
-
-#toggle-theme-button:hover {
-    border: 4px solid #6ccfca;
-}
-
 section, article {
     width: 969px;
     background-color: rgb(230, 253, 246);
